@@ -115,16 +115,16 @@ class Ranking(models.Model):
           loss=tf.keras.losses.BinaryCrossentropy(
               reduction=tf.keras.losses.Reduction.NONE
           ),
-          metrics=[
-              tf.keras.metrics.AUC(name="auc"),
-              tf.keras.metrics.BinaryAccuracy(name="accuracy"),
-          ],
-          prediction_metrics=[
-              tf.keras.metrics.Mean("prediction_mean"),
-          ],
-          label_metrics=[
-              tf.keras.metrics.Mean("label_mean")
-          ]
+          # metrics=[
+          #     tf.keras.metrics.AUC(name="auc"),
+          #     tf.keras.metrics.BinaryAccuracy(name="accuracy"),
+          # ],
+          # prediction_metrics=[
+          #     tf.keras.metrics.Mean("prediction_mean"),
+          # ],
+          # label_metrics=[
+          #     tf.keras.metrics.Mean("label_mean")
+          # ]
       )
 
   def compute_loss(self,
